@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.jpa)
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.detekt)
 }
 
 group = "com.fdesande"
@@ -28,6 +29,16 @@ dependencies {
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.kotlin.test.junit5)
     testRuntimeOnly(libs.junit.platform.launcher)
+
+    detektPlugins(libs.detekt.formatting)
+}
+
+detekt {
+    toolVersion = "1.21.0"
+    config = files("${project.rootDir}/detekt.yml")
+    buildUponDefaultConfig = true
+    autoCorrect = true
+    parallel = true
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
@@ -40,6 +51,18 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 tasks.withType<JavaCompile> {
     sourceCompatibility = "11"
     targetCompatibility = "11"
+}
+
+tasks.register<io.gitlab.arturbosch.detekt.Detekt>("detektAll") {
+    description = "Runs detekt on the whole project at once."
+    parallel = true
+    setSource(files(projectDir))
+    include("**/*.kt")
+    include("**/*.kts")
+    exclude("**/build/**")
+    exclude("**/resources/**")
+    config.setFrom(files("${project.rootDir}/detekt.yml"))
+    buildUponDefaultConfig = true
 }
 
 tasks.withType<Test> {

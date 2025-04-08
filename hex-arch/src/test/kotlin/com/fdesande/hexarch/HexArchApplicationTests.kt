@@ -8,5 +8,6 @@ class HexArchApplicationTests {
 
     @Test
     fun `context loads`() {
+        // Smoke tests
     }
 }
