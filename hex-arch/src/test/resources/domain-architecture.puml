@@ -1,0 +1,17 @@
+@startuml
+
+skinparam componentStyle uml2
+skinparam component {
+  BorderColor #grey
+  BackgroundColor #white
+}
+
+[Model] <<com.fdesande.hexarch.domain.model..>> as model
+[Port] <<com.fdesande.hexarch.domain.port..>> as port
+[Service] <<com.fdesande.hexarch.domain.service..>> as service
+
+port -> model
+service -> model
+service -> port
+
+@enduml
