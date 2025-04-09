@@ -29,6 +29,7 @@ dependencyResolutionManagement {
             library("kotlin-test-junit5", "org.jetbrains.kotlin", "kotlin-test-junit5").withoutVersion()
             library("junit-platform-launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
             library("detekt-formatting", "io.gitlab.arturbosch.detekt", "detekt-formatting").versionRef("detekt")
+            library("mockito-kotlin", "org.mockito.kotlin", "mockito-kotlin").version("4.1.0")
         }
     }
 }
