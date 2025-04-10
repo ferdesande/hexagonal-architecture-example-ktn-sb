@@ -1,7 +1,7 @@
 package com.fdesande.hexarch.domain.port.input
 
-import com.fdesande.hexarch.domain.model.ProductId
 import com.fdesande.hexarch.domain.model.Product
+import com.fdesande.hexarch.domain.model.ProductId
 import com.fdesande.hexarch.domain.model.ProductQuery
 
 interface ProductSearchUseCase {

@@ -24,7 +24,6 @@ class ProductTest {
         assertThat(product.brand, equalTo("bar"))
     }
 
-
     @ParameterizedTest
     @ValueSource(strings = ["     ", ""])
     fun `product throws IllegalArgumentException when name is blank`(name: String) {
