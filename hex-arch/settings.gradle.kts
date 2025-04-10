@@ -12,6 +12,7 @@ dependencyResolutionManagement {
         create("libs") {
             version("kotlin", "1.6.21")
             version("spring-boot", "2.7.18")
+            version("database-rider", "1.44.0")
             version("detekt", "1.21.0")
             version("rest-assured", "5.1.1")
             version("testcontainers", "1.18.3")
@@ -28,6 +29,9 @@ dependencyResolutionManagement {
             library("spring-boot-starter-data-jpa", "org.springframework.boot", "spring-boot-starter-data-jpa")
                 .withoutVersion()
             library("archunit-junit5", "com.tngtech.archunit", "archunit-junit5").version("1.4.0")
+            library("database-rider-core", "com.github.database-rider", "rider-core").versionRef("database-rider")
+            library("database-rider-spring", "com.github.database-rider", "rider-spring").versionRef("database-rider")
+            library("database-rider-junit5", "com.github.database-rider", "rider-junit5").versionRef("database-rider")
             library("detekt-formatting", "io.gitlab.arturbosch.detekt", "detekt-formatting").versionRef("detekt")
             library("fasterxml-jackson-module-kotlin", "com.fasterxml.jackson.module", "jackson-module-kotlin")
                 .withoutVersion()

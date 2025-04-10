@@ -1,0 +1,92 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "description": "American sport manufacturer",
+      "name": "Nike"
+    },
+    {
+      "id": 2,
+      "description": "German sport manufacturer",
+      "name": "Adidas"
+    }
+  ],
+  "product_images": [
+    {
+      "id": "00000000-0000-0001-0001-000000000002",
+      "name": "Front",
+      "url": "https://img/nike/hoodie-front.png",
+      "product_id": "00000000-0000-0000-0000-000000000001"
+    },
+    {
+      "id": "00000000-0000-0001-0001-000000000002",
+      "name": "Front with model",
+      "url": "https://img/nike/hoodie-front-with-model.png",
+      "product_id": "00000000-0000-0000-0000-000000000001"
+    },
+    {
+      "id": "00000000-0000-0001-0002-000000000001",
+      "name": "Red Predrator",
+      "url": "https://img/nike/hoodie-front-with-model.png",
+      "product_id": "00000000-0000-0000-0000-000000000002"
+    },
+    {
+      "id": "00000000-0000-0001-0002-000000000002",
+      "name": "Blue Predrator",
+      "url": "https://img/nike/hoodie-front-with-model.png",
+      "product_id": "00000000-0000-0000-0000-000000000002"
+    },
+    {
+      "id": "00000000-0000-0001-0002-000000000003",
+      "name": "Pink Predrator",
+      "url": "https://img/nike/hoodie-front-with-model.png",
+      "product_id": "00000000-0000-0000-0000-000000000002"
+    }
+  ],
+  "product_prices": [
+    {
+      "id": "00000000-0000-0000-0001-000000000001",
+      "amount": 37.21,
+      "currency_code": "EUR",
+      "product_id": "00000000-0000-0000-0000-000000000001"
+    },
+    {
+      "id": "00000000-0000-0000-0001-000000000002",
+      "amount": 125.99,
+      "currency_code": "EUR",
+      "product_id": "00000000-0000-0000-0000-000000000002"
+    },
+    {
+      "id": "00000000-0000-0000-0001-000000000003",
+      "amount": 90.00,
+      "currency_code": "EUR",
+      "product_id": "00000000-0000-0000-0000-000000000003"
+    }
+  ],
+  "products": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "description": "A fancy hoodie with a blue camouflage",
+      "name": "Blue camouflage hoodie",
+      "brand_id": 1,
+      "created_at": "[DAY,YESTERDAY]",
+      "updated_at": "[DAY,YESTERDAY]"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "description": "Top performance football shoes",
+      "name": "Adidas predator 2025",
+      "brand_id": 2,
+      "created_at": "[DAY,YESTERDAY]",
+      "updated_at": "[DAY,YESTERDAY]"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000003",
+      "description": "The Argentinian official football T-Shirt 2025",
+      "name": "Argentina football T-Shirt 2025",
+      "brand_id": 2,
+      "created_at": "[DAY,YESTERDAY]",
+      "updated_at": "[DAY,YESTERDAY]"
+    }
+  ]
+}

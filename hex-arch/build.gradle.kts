@@ -28,6 +28,9 @@ dependencies {
     implementation(libs.kotlin.reflect)
     runtimeOnly(libs.postgresql)
     testImplementation(libs.spring.boot.starter.test)
+    testImplementation(libs.database.rider.core)
+    testImplementation(libs.database.rider.spring)
+    testImplementation(libs.database.rider.junit5)
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.archunit.junit5)
     testImplementation(libs.mockito.kotlin){
