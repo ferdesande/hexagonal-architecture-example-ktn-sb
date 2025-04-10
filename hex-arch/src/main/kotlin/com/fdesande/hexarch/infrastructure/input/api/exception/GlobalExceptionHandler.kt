@@ -1,4 +1,4 @@
-package com.fdesande.hexarch.infrastructure.api.exception
+package com.fdesande.hexarch.infrastructure.input.api.exception
 
 import com.fdesande.hexarch.infrastructure.exception.ApplicationException
 import com.fdesande.hexarch.infrastructure.exception.EmptyResultException
@@ -19,7 +19,7 @@ class GlobalExceptionHandler {
         ex: ApplicationException,
         request: WebRequest
     ): ResponseEntity<List<Any>> {
-        return ResponseEntity.status(getHttpStatus(ex)).body(emptyList<Any>())
+        return ResponseEntity.status(getHttpStatus(ex)).body(emptyList())
     }
 
     @ExceptionHandler(ApplicationException::class)

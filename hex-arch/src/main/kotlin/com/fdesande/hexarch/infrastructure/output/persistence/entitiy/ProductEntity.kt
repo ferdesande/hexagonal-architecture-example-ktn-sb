@@ -1,4 +1,4 @@
-package com.fdesande.hexarch.infrastructure.persistence.entitiy
+package com.fdesande.hexarch.infrastructure.output.persistence.entitiy
 
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.GenericGenerator

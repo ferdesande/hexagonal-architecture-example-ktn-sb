@@ -1,11 +1,11 @@
-package com.fdesande.hexarch.infrastructure.api
+package com.fdesande.hexarch.infrastructure.input.api
 
 import com.fdesande.hexarch.domain.model.ProductQuery
 import com.fdesande.hexarch.domain.port.input.ProductSearchUseCase
-import com.fdesande.hexarch.infrastructure.api.dto.ProductDto
-import com.fdesande.hexarch.infrastructure.api.mapper.ProductMapper
 import com.fdesande.hexarch.infrastructure.exception.EmptyResultException
 import com.fdesande.hexarch.infrastructure.exception.ResourceNotFoundException
+import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
+import com.fdesande.hexarch.infrastructure.input.api.mapper.ProductMapper
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping

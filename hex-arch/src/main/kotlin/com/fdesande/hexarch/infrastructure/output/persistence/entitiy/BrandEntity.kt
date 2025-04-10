@@ -1,4 +1,4 @@
-package com.fdesande.hexarch.infrastructure.persistence.entitiy
+package com.fdesande.hexarch.infrastructure.output.persistence.entitiy
 
 import javax.persistence.*
 

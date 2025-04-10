@@ -1,4 +1,4 @@
-package com.fdesande.hexarch.infrastructure.api.exception
+package com.fdesande.hexarch.infrastructure.input.api.exception
 
 import java.time.LocalDateTime
 

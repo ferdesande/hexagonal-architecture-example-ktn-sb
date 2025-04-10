@@ -1,12 +1,12 @@
-package com.fdesande.hexarch.infrastructure.api.mapper
+package com.fdesande.hexarch.infrastructure.input.api.mapper
 
 import com.fdesande.hexarch.domain.model.Image
 import com.fdesande.hexarch.domain.model.Price
 import com.fdesande.hexarch.domain.model.Product
 import com.fdesande.hexarch.domain.model.ProductId
-import com.fdesande.hexarch.infrastructure.api.dto.ImageDto
-import com.fdesande.hexarch.infrastructure.api.dto.PriceDto
-import com.fdesande.hexarch.infrastructure.api.dto.ProductDto
+import com.fdesande.hexarch.infrastructure.input.api.dto.ImageDto
+import com.fdesande.hexarch.infrastructure.input.api.dto.PriceDto
+import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
 import org.springframework.stereotype.Component
 import java.util.*
 

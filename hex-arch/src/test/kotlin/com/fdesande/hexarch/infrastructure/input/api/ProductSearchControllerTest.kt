@@ -1,11 +1,11 @@
-package com.fdesande.hexarch.infrastructure.api
+package com.fdesande.hexarch.infrastructure.input.api
 
 import com.fdesande.hexarch.domain.model.*
 import com.fdesande.hexarch.domain.port.input.ProductSearchUseCase
-import com.fdesande.hexarch.infrastructure.api.dto.ImageDto
-import com.fdesande.hexarch.infrastructure.api.dto.PriceDto
-import com.fdesande.hexarch.infrastructure.api.dto.ProductDto
-import com.fdesande.hexarch.infrastructure.api.exception.ErrorResponse
+import com.fdesande.hexarch.infrastructure.input.api.dto.ImageDto
+import com.fdesande.hexarch.infrastructure.input.api.dto.PriceDto
+import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
+import com.fdesande.hexarch.infrastructure.input.api.exception.ErrorResponse
 import io.restassured.RestAssured
 import io.restassured.module.kotlin.extensions.Extract
 import io.restassured.module.kotlin.extensions.Given

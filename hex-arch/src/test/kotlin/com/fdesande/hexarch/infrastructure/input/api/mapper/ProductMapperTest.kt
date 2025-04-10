@@ -1,11 +1,10 @@
-package com.fdesande.hexarch.infrastructure.mapper
+package com.fdesande.hexarch.infrastructure.input.api.mapper
 
 import com.fdesande.hexarch.domain.model.Image
 import com.fdesande.hexarch.domain.model.Price
 import com.fdesande.hexarch.domain.model.Product
 import com.fdesande.hexarch.domain.model.ProductId
-import com.fdesande.hexarch.infrastructure.api.dto.ImageDto
-import com.fdesande.hexarch.infrastructure.api.mapper.ProductMapper
+import com.fdesande.hexarch.infrastructure.input.api.dto.ImageDto
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
 import org.junit.jupiter.api.Test
