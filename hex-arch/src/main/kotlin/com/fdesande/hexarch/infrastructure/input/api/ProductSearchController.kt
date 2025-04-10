@@ -6,10 +6,8 @@ import com.fdesande.hexarch.infrastructure.exception.EmptyResultException
 import com.fdesande.hexarch.infrastructure.exception.ResourceNotFoundException
 import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
 import com.fdesande.hexarch.infrastructure.input.api.mapper.ProductMapper
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
+import java.math.BigDecimal
 import java.util.*
 
 @RestController
@@ -19,9 +17,18 @@ class ProductSearchController(
     private val productMapper: ProductMapper
 ) {
     @GetMapping
-    fun getProducts(): List<ProductDto> {
+    fun getProducts(
+        @RequestParam("filter", required = false) filter: String? = null,
+        @RequestParam("minPrice", required = false) minPrice: BigDecimal? = null,
+        @RequestParam("maxPrice", required = false) maxPrice: BigDecimal? = null,
+    ): List<ProductDto> {
+        val query = ProductQuery(
+            filter = filter,
+            minPrice = minPrice,
+            maxPrice = maxPrice,
+        )
         val dtos = productSearchUseCase
-            .search(ProductQuery())
+            .search(query)
             .mapNotNull { productMapper.toDto(it) }
 
         if (dtos.isNotEmpty()) {

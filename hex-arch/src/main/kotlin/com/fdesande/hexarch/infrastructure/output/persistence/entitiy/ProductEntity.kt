@@ -42,5 +42,5 @@ class ProductEntity(
 
     @UpdateTimestamp
     @Column(nullable = false)
-    val updatedAt: LocalDateTime? = null
+    val updatedAt: Instant? = null
 )

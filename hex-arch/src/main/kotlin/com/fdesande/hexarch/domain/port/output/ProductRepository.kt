@@ -6,5 +6,5 @@ import com.fdesande.hexarch.domain.model.ProductQuery
 
 interface ProductRepository {
     fun find(query: ProductQuery): Set<Product>
-    fun findById(id: ProductId): Product?
+    fun findById(productId: ProductId): Product?
 }
