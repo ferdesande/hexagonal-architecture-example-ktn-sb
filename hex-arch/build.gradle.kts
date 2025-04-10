@@ -30,7 +30,9 @@ dependencies {
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.archunit.junit5)
-    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockito.kotlin){
+        exclude("net.bytebuddy", "byte-buddy")
+    }
     testImplementation(libs.rest.assured.kotlin.extensions)
     testImplementation(libs.testcontainers.postgresql)
     testImplementation(libs.testcontainers.junit.jupiter)
