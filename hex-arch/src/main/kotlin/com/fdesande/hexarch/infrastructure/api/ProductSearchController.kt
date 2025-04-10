@@ -7,6 +7,7 @@ import com.fdesande.hexarch.infrastructure.api.mapper.ProductMapper
 import com.fdesande.hexarch.infrastructure.exception.EmptyResultException
 import com.fdesande.hexarch.infrastructure.exception.ResourceNotFoundException
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import java.util.*
@@ -30,8 +31,8 @@ class ProductSearchController(
         }
     }
 
-    @GetMapping
-    fun getProductById(id: UUID): ProductDto {
+    @GetMapping("/{id}")
+    fun getProductById(@PathVariable id: UUID): ProductDto {
         return productSearchUseCase
             .searchById(productMapper.uuidToProductId(id))
             ?.let { productMapper.toDto(it) }
