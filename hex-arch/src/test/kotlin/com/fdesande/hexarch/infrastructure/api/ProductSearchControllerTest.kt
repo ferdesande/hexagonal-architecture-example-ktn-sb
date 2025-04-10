@@ -62,7 +62,7 @@ class ProductSearchControllerTest {
             body().jsonPath().getList("", ProductDto::class.java)
         }
 
-        // Assert
+        // Then
         assertThat(dtos, hasSize(products.size))
         assertThat(dtos, equalTo(products.map(::createProductDto)))
     }
@@ -100,7 +100,7 @@ class ProductSearchControllerTest {
             body().jsonPath().getObject("", ProductDto::class.java)
         }
 
-        // Assert
+        // Then
         assertThat(dto, notNullValue())
         assertThat(dto, equalTo(createProductDto(product)))
     }

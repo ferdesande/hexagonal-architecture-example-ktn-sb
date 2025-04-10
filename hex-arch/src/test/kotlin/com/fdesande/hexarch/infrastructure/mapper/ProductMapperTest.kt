@@ -36,10 +36,10 @@ class ProductMapperTest {
 
     @Test
     fun `toDto maps product correctly`() {
-        // Act
+        // When
         val actual = productMapper.toDto(sampleProduct)
 
-        // Assert
+        // Then
         assertThat(actual, notNullValue())
         assertThat(actual!!.id, equalTo(sampleUUID))
         assertThat(actual.name, equalTo(sampleProduct.name))
@@ -56,19 +56,19 @@ class ProductMapperTest {
 
     @Test
     fun `toDto returns null when product is null`() {
-        // Act
+        // When
         val actual = productMapper.toDto(null)
 
-        // Assert
+        // Then
         assertThat(actual, nullValue())
     }
 
     @Test
     fun `uuidToProductId returns ProductId`() {
-        // Act
+        // When
         val actual = productMapper.uuidToProductId(sampleUUID)
 
-        // Assert
+        // Then
         assertThat(actual, equalTo(ProductId(sampleUUID)))
     }
 }

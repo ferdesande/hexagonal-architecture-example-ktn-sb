@@ -14,12 +14,12 @@ class ProductTest {
 
     @Test
     fun `product is created correctly`() {
-        // Act
+        // When
         val product = assertDoesNotThrow {
             createProduct(name = "foo", brand = "bar")
         }
 
-        // Assert
+        // Then
         assertThat(product.name, equalTo("foo"))
         assertThat(product.brand, equalTo("bar"))
     }
@@ -27,7 +27,7 @@ class ProductTest {
     @ParameterizedTest
     @ValueSource(strings = ["     ", ""])
     fun `product throws IllegalArgumentException when name is blank`(name: String) {
-        // Act / Assert
+        // When / Then
         val exception = assertThrows<IllegalArgumentException> {
             createProduct(name = name)
         }
@@ -38,7 +38,7 @@ class ProductTest {
     @ParameterizedTest
     @ValueSource(strings = ["     ", ""])
     fun `product throws IllegalArgumentException when brand is blank`(brand: String) {
-        // Act / Assert
+        // When / Then
         val exception = assertThrows<IllegalArgumentException> {
             createProduct(brand = brand)
         }

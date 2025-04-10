@@ -38,50 +38,50 @@ class ProductSearchServiceTest {
 
     @Test
     fun `search returns empty set when repository returns an empty set`() {
-        // Arrange
+        // Given
         whenever(repository.find(productQuery)).thenReturn(emptySet())
 
-        // Act
+        // When
         val actual = service.search(productQuery)
 
-        // Assert
+        // Then
         assertThat(actual, emptyIterable())
     }
 
     @Test
     fun `search returns set obtained from repository`() {
-        // Arrange
+        // Given
         val anotherProduct = createProduct(UUID.fromString("00000000-0000-0000-0000-000000000002"))
         whenever(repository.find(productQuery)).thenReturn(setOf(sampleProduct, anotherProduct))
 
-        // Act
+        // When
         val actual = service.search(productQuery)
 
-        // Assert
+        // Then
         assertThat(actual, contains(sampleProduct, anotherProduct))
     }
 
     @Test
     fun `searchById returns null set when repository returns null`() {
-        // Arrange
+        // Given
         whenever(repository.findById(sampleId)).thenReturn(null)
 
-        // Act
+        // When
         val actual = service.searchById(sampleId)
 
-        // Assert
+        // Then
         assertThat(actual, nullValue())
     }
 
     @Test
     fun `searchById returns set obtained from repository`() {
-        // Arrange
+        // Given
         whenever(repository.findById(sampleId)).thenReturn(sampleProduct)
 
-        // Act
+        // When
         val actual = service.searchById(sampleId)
 
-        // Assert
+        // Then
         assertThat(actual, equalTo(sampleProduct))
     }
 

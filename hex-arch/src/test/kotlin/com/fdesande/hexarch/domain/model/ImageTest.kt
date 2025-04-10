@@ -12,19 +12,19 @@ import kotlin.test.Test
 class ImageTest {
     @Test
     fun `image is created correctly`() {
-        // Act
+        // When
         val product = assertDoesNotThrow {
             createImage("https://some.url")
         }
 
-        // Assert
+        // Then
         assertThat(product.url, equalTo("https://some.url"))
     }
 
     @ParameterizedTest
     @ValueSource(strings = ["     ", ""])
     fun `image throws IllegalArgumentException when url is blank`(url: String) {
-        // Act / Assert
+        // When / Then
         val exception = assertThrows<IllegalArgumentException> {
             createImage(url)
         }
