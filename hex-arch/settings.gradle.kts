@@ -13,6 +13,7 @@ dependencyResolutionManagement {
             version("kotlin", "1.6.21")
             version("spring-boot", "2.7.18")
             version("detekt", "1.21.0")
+            version("rest-assured", "5.1.1")
 
             plugin("kotlin-jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
             plugin("kotlin-spring", "org.jetbrains.kotlin.plugin.spring").versionRef("kotlin")
@@ -31,6 +32,7 @@ dependencyResolutionManagement {
             library("kotlin-test-junit5", "org.jetbrains.kotlin", "kotlin-test-junit5").withoutVersion()
             library("junit-platform-launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
             library("mockito-kotlin", "org.mockito.kotlin", "mockito-kotlin").version("4.1.0")
+            library("rest-assured-kotlin-extensions", "io.rest-assured", "kotlin-extensions").withoutVersion()
         }
     }
 }

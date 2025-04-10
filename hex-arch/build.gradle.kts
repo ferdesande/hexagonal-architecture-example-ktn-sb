@@ -30,6 +30,7 @@ dependencies {
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.archunit.junit5)
     testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.rest.assured.kotlin.extensions)
     testRuntimeOnly(libs.junit.platform.launcher)
 
     detektPlugins(libs.detekt.formatting)
