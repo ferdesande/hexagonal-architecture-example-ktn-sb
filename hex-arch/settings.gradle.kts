@@ -24,6 +24,8 @@ dependencyResolutionManagement {
 
             library("spring-boot-starter-web", "org.springframework.boot", "spring-boot-starter-web").withoutVersion()
             library("spring-boot-starter-test", "org.springframework.boot", "spring-boot-starter-test").withoutVersion()
+            library("spring-boot-starter-data-jpa", "org.springframework.boot", "spring-boot-starter-data-jpa")
+                .withoutVersion()
             library("archunit-junit5", "com.tngtech.archunit", "archunit-junit5").version("1.4.0")
             library("detekt-formatting", "io.gitlab.arturbosch.detekt", "detekt-formatting").versionRef("detekt")
             library("fasterxml-jackson-module-kotlin", "com.fasterxml.jackson.module", "jackson-module-kotlin")
@@ -32,6 +34,7 @@ dependencyResolutionManagement {
             library("kotlin-test-junit5", "org.jetbrains.kotlin", "kotlin-test-junit5").withoutVersion()
             library("junit-platform-launcher", "org.junit.platform", "junit-platform-launcher").withoutVersion()
             library("mockito-kotlin", "org.mockito.kotlin", "mockito-kotlin").version("4.1.0")
+            library("postgresql", "org.postgresql", "postgresql").version("42.7.5")
             library("rest-assured-kotlin-extensions", "io.rest-assured", "kotlin-extensions").withoutVersion()
         }
     }

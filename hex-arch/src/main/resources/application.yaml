@@ -1,3 +1,30 @@
 spring:
   application:
     name: hex-arch
+
+  profiles:
+    active: local-dev
+---
+spring:
+  config:
+    activate:
+      on-profile: local-dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hexagonal
+    username: sa
+    password: hex4G0nal!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+#    show-sql: true # The following properties allow to see the sql queries in logs with formatted sql
+#    properties:
+#      hibernate:
+#        format_sql: true
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8080
