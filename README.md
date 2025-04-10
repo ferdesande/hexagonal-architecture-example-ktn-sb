@@ -27,7 +27,8 @@ The swagger definition of the API can be found [here](http://localhost:8080/swag
 
 The JSON OpenAPI specification can be found [here](http://localhost:8080/v3/api-docs)
 
-The Gradle task ``generateOpenApiDocs`` can be run in order to generate the documents.
+The Gradle task ``generateOpenApiDocs`` can be run in order to generate the documents. If the documentation is not 
+generated after re-run the app. Call the Gradle task after the build. 
 
 ### Docker
 
