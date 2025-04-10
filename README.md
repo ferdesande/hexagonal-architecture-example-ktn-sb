@@ -20,3 +20,13 @@ An example or Hexagonal Architecture with Kotlin and Spring Boot
 
 Be careful with the Detekt plugin version. The plugin version must be compatible with the Kotlin version in use. For
 more info see the [Official Web Site](https://detekt.dev/docs/introduction/compatibility/).
+
+
+### Docker
+
+A Docker environment available to execute the application. A ``docker-compose.yml`` file is available at 
+`ìnfrastructure/local` with all the needed images. This environment is configured to be used with the ``local-dev`` 
+profile.
+
+#### Database
+A **Postgres** database is configured to run the database persistence.

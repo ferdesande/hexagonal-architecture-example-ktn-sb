@@ -1,0 +1,22 @@
+services:
+
+  database:
+    image: postgres:17.4-alpine3.21
+    container_name: hexagonal-db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: hex4G0nal!
+      POSTGRES_DB: hexagonal
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U sa -d hexagonal" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+volumes:
+  database-data:
+    name: hexagonal-db-data
