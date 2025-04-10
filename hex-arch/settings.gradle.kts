@@ -26,7 +26,6 @@ dependencyResolutionManagement {
             plugin("spring-dependency-management", "io.spring.dependency-management").version("1.1.7")
             plugin("springdoc-openapi", "org.springdoc.openapi-gradle-plugin").version("1.9.0")
 
-
             library("spring-boot-starter-web", "org.springframework.boot", "spring-boot-starter-web").withoutVersion()
             library("spring-boot-starter-test", "org.springframework.boot", "spring-boot-starter-test").withoutVersion()
             library("spring-boot-starter-data-jpa", "org.springframework.boot", "spring-boot-starter-data-jpa")

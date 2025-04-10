@@ -36,7 +36,7 @@ dependencies {
     testImplementation(libs.database.rider.junit5)
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.archunit.junit5)
-    testImplementation(libs.mockito.kotlin){
+    testImplementation(libs.mockito.kotlin) {
         exclude("net.bytebuddy", "byte-buddy")
     }
     testImplementation(libs.rest.assured.kotlin.extensions)

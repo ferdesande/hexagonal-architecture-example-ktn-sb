@@ -19,10 +19,10 @@ class ProductRepositoryAdapter(
         return productRepository.findAll()
             .asSequence()
             .filter {
-                lowercaseFilter == null
-                    || it.name.lowercase().contains(lowercaseFilter)
-                    || it.description.lowercase().contains(lowercaseFilter)
-                    || it.brand.name.lowercase().contains(lowercaseFilter)
+                lowercaseFilter == null ||
+                    it.name.lowercase().contains(lowercaseFilter) ||
+                    it.description.lowercase().contains(lowercaseFilter) ||
+                    it.brand.name.lowercase().contains(lowercaseFilter)
             }
             .filter { query.minPrice == null || it.price!!.amount >= query.minPrice }
             .filter { query.maxPrice == null || it.price!!.amount <= query.maxPrice }
