@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.detekt)
+    alias(libs.plugins.springdoc.openapi)
 }
 
 group = "com.fdesande"
@@ -23,9 +24,11 @@ repositories {
 
 dependencies {
     implementation(libs.spring.boot.starter.web)
-    implementation(libs.fasterxml.jackson.module.kotlin)
     implementation(libs.spring.boot.starter.data.jpa)
+    implementation(libs.fasterxml.jackson.module.kotlin)
     implementation(libs.kotlin.reflect)
+    implementation(libs.springdoc.openapi.ui)
+    implementation(libs.springdoc.openapi.kotlin)
     runtimeOnly(libs.postgresql)
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.database.rider.core)

@@ -21,6 +21,13 @@ An example or Hexagonal Architecture with Kotlin and Spring Boot
 Be careful with the Detekt plugin version. The plugin version must be compatible with the Kotlin version in use. For
 more info see the [Official Web Site](https://detekt.dev/docs/introduction/compatibility/).
 
+## Documentation
+
+The swagger definition of the API can be found [here](http://localhost:8080/swagger-ui/index.html).
+
+The JSON OpenAPI specification can be found [here](http://localhost:8080/v3/api-docs)
+
+The Gradle task ``generateOpenApiDocs`` can be run in order to generate the documents.
 
 ### Docker
 

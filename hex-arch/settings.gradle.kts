@@ -15,14 +15,17 @@ dependencyResolutionManagement {
             version("database-rider", "1.44.0")
             version("detekt", "1.21.0")
             version("rest-assured", "5.1.1")
+            version("springdoc", "1.7.0")
             version("testcontainers", "1.18.3")
 
+            plugin("detekt", "io.gitlab.arturbosch.detekt").versionRef("detekt")
             plugin("kotlin-jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
             plugin("kotlin-spring", "org.jetbrains.kotlin.plugin.spring").versionRef("kotlin")
             plugin("kotlin-jpa", "org.jetbrains.kotlin.plugin.jpa").versionRef("kotlin")
             plugin("spring-boot", "org.springframework.boot").versionRef("spring-boot")
             plugin("spring-dependency-management", "io.spring.dependency-management").version("1.1.7")
-            plugin("detekt", "io.gitlab.arturbosch.detekt").versionRef("detekt")
+            plugin("springdoc-openapi", "org.springdoc.openapi-gradle-plugin").version("1.9.0")
+
 
             library("spring-boot-starter-web", "org.springframework.boot", "spring-boot-starter-web").withoutVersion()
             library("spring-boot-starter-test", "org.springframework.boot", "spring-boot-starter-test").withoutVersion()
@@ -41,6 +44,8 @@ dependencyResolutionManagement {
             library("mockito-kotlin", "org.mockito.kotlin", "mockito-kotlin").version("4.1.0")
             library("postgresql", "org.postgresql", "postgresql").version("42.7.5")
             library("rest-assured-kotlin-extensions", "io.rest-assured", "kotlin-extensions").withoutVersion()
+            library("springdoc-openapi-ui", "org.springdoc", "springdoc-openapi-ui").versionRef("springdoc")
+            library("springdoc-openapi-kotlin", "org.springdoc", "springdoc-openapi-kotlin").versionRef("springdoc")
             library("testcontainers-postgresql", "org.testcontainers", "postgresql").versionRef("testcontainers")
             library("testcontainers-junit-jupiter", "org.testcontainers", "junit-jupiter").versionRef("testcontainers")
         }

@@ -6,12 +6,14 @@ import com.fdesande.hexarch.infrastructure.exception.EmptyResultException
 import com.fdesande.hexarch.infrastructure.exception.ResourceNotFoundException
 import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
 import com.fdesande.hexarch.infrastructure.input.api.mapper.ProductMapper
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.*
 import java.math.BigDecimal
 import java.util.*
 
 @RestController
 @RequestMapping("/products")
+@Tag(name = "Product Search", description = "Endpoints to fetch products")
 class ProductSearchController(
     private val productSearchUseCase: ProductSearchUseCase,
     private val productMapper: ProductMapper
