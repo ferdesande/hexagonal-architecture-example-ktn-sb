@@ -14,6 +14,7 @@ dependencyResolutionManagement {
             version("spring-boot", "2.7.18")
             version("detekt", "1.21.0")
             version("rest-assured", "5.1.1")
+            version("testcontainers", "1.18.3")
 
             plugin("kotlin-jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
             plugin("kotlin-spring", "org.jetbrains.kotlin.plugin.spring").versionRef("kotlin")
@@ -36,6 +37,8 @@ dependencyResolutionManagement {
             library("mockito-kotlin", "org.mockito.kotlin", "mockito-kotlin").version("4.1.0")
             library("postgresql", "org.postgresql", "postgresql").version("42.7.5")
             library("rest-assured-kotlin-extensions", "io.rest-assured", "kotlin-extensions").withoutVersion()
+            library("testcontainers-postgresql", "org.testcontainers", "postgresql").versionRef("testcontainers")
+            library("testcontainers-junit-jupiter", "org.testcontainers", "junit-jupiter").versionRef("testcontainers")
         }
     }
 }

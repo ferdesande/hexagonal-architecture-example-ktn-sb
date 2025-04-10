@@ -2,6 +2,7 @@ package com.fdesande.hexarch.infrastructure.input.api
 
 import com.fdesande.hexarch.domain.model.*
 import com.fdesande.hexarch.domain.port.input.ProductSearchUseCase
+import com.fdesande.hexarch.infrastructure.config.TestcontainersConfiguration
 import com.fdesande.hexarch.infrastructure.input.api.dto.ImageDto
 import com.fdesande.hexarch.infrastructure.input.api.dto.PriceDto
 import com.fdesande.hexarch.infrastructure.input.api.dto.ProductDto
@@ -22,11 +23,13 @@ import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
+import org.springframework.test.context.ContextConfiguration
 import java.math.BigDecimal
 import java.util.*
 import kotlin.test.Test
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ContextConfiguration(initializers = [TestcontainersConfiguration.Initializer::class])
 class ProductSearchControllerTest {
 
     private val image1 = Image(UUID.randomUUID(), "https://some.url", "first image")
