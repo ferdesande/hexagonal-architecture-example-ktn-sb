@@ -13,7 +13,7 @@
   ],
   "product_images": [
     {
-      "id": "00000000-0000-0001-0001-000000000002",
+      "id": "00000000-0000-0001-0001-000000000001",
       "name": "Front",
       "url": "https://img/nike/hoodie-front.png",
       "product_id": "00000000-0000-0000-0000-000000000001"
@@ -26,20 +26,20 @@
     },
     {
       "id": "00000000-0000-0001-0002-000000000001",
-      "name": "Red Predrator",
-      "url": "https://img/nike/hoodie-front-with-model.png",
+      "name": "Red Predator",
+      "url": "https://img/adidas/predator-25-red.png",
       "product_id": "00000000-0000-0000-0000-000000000002"
     },
     {
       "id": "00000000-0000-0001-0002-000000000002",
-      "name": "Blue Predrator",
-      "url": "https://img/nike/hoodie-front-with-model.png",
+      "name": "Blue Predator",
+      "url": "https://img/adidas/predator-25-blue.png",
       "product_id": "00000000-0000-0000-0000-000000000002"
     },
     {
       "id": "00000000-0000-0001-0002-000000000003",
-      "name": "Pink Predrator",
-      "url": "https://img/nike/hoodie-front-with-model.png",
+      "name": "Pink Predator",
+      "url": "https://img/adidas/predator-25-pink.png",
       "product_id": "00000000-0000-0000-0000-000000000002"
     }
   ],

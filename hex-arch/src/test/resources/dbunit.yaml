@@ -1,0 +1,5 @@
+caseInsensitiveStrategy: LOWERCASE
+properties:
+  batchedStatements: true
+  schema: public
+  allowEmptyFields: true
